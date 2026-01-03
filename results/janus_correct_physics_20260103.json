@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "date": "2026-01-03T14:34:41.622911",
+    "version": "2.0 - PHYSIQUE JANUS CORRIG\u00c9E",
+    "n_galaxies": 16,
+    "redshift_range": [
+      10.6,
+      14.32
+    ],
+    "note": "Analyse avec vrais param\u00e8tres JANUS (ratio densit\u00e9), pas \u03b1 fictif"
+  },
+  "parameters_realistic": {
+    "SFR_max": 800.0,
+    "efficiency": 0.7,
+    "time_fraction": 0.9,
+    "source": "Boylan-Kolchin 2023, Robertson+2023 consensus"
+  },
+  "LCDM_realistic": {
+    "chi2": 5359.85600007664,
+    "tensions": 16,
+    "mean_gap_dex": 5.1768308865380455
+  },
+  "JANUS": {
+    "parameter": "density_ratio \u03c1\u208b/\u03c1\u208a",
+    "historical_value": 64,
+    "historical_source": "DESY 1992 simulations (JP Petit)",
+    "acceleration_approximation": "\u221a(\u03c1\u208b/\u03c1\u208a)",
+    "results_ratio_64": {
+      "chi2": 3672.7151656900455,
+      "tensions": 16,
+      "mean_gap_dex": 4.273740899546102,
+      "improvement_percent": 31.477353764027807,
+      "acceleration": 8.0
+    },
+    "sensitivity_analysis": {
+      "ratio_16": {
+        "chi2": 4199.654556155836,
+        "tensions": 16,
+        "gap_dex": 4.574770895210083,
+        "improvement_pct": 21.646130864415284,
+        "acceleration": 4.0
+      },
+      "ratio_32": {
+        "chi2": 3931.7547499650564,
+        "tensions": 16,
+        "gap_dex": 4.424255897378092,
+        "improvement_pct": 26.644395858604476,
+        "acceleration": 5.656854249492381
+      },
+      "ratio_64": {
+        "chi2": 3672.7151656900455,
+        "tensions": 16,
+        "gap_dex": 4.273740899546102,
+        "improvement_pct": 31.477353764027807,
+        "acceleration": 8.0
+      },
+      "ratio_128": {
+        "chi2": 3422.535803330803,
+        "tensions": 16,
+        "gap_dex": 4.123225901714111,
+        "improvement_pct": 36.145004580685296,
+        "acceleration": 11.313708498984761
+      },
+      "ratio_256": {
+        "chi2": 3181.216662887329,
+        "tensions": 16,
+        "gap_dex": 3.972710903882121,
+        "improvement_pct": 40.64734830857692,
+        "acceleration": 16.0
+      }
+    },
+    "best_ratio": 256
+  },
+  "comparison_old_parameters": {
+    "note": "Contexte: comparaison avec param\u00e8tres conservateurs de v1",
+    "LCDM_old": 10517.336472300462,
+    "JANUS_old": 8088.352656026118,
+    "correction_factor": 1.962242357285359
+  }
+}

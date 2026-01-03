@@ -1,9 +1,39 @@
 # JANUS-Z - Analyse Cosmologique JANUS vs ΛCDM
 
 **Date de création**: 2025-12-08
-**Dernière mise à jour**: 2026-01-03 13:50 UTC
-**Statut**: Phase 1 complète → Publication draft prêt
+**Dernière mise à jour**: 2026-01-03 14:40 UTC
+**Statut**: Phase 2.0 - PHYSIQUE JANUS CORRIGÉE
 **Objectif**: Publication scientifique académique
+
+---
+
+## 🔴 MISE À JOUR IMPORTANTE - Version 2.0 (2026-01-03)
+
+### Correction Fondamentale Appliquée
+
+**PROBLÈME IDENTIFIÉ**: L'analyse Version 1.0 utilisait un paramètre "α" (facteur de multiplication du temps) qui était **INVENTÉ** et ne fait pas partie du modèle JANUS original.
+
+**CORRECTION**: Version 2.0 utilise la **vraie physique JANUS**:
+- **Paramètre réel**: Rapport de densité **ρ₋/ρ₊** (densité matière négative / densité matière positive)
+- **Valeur historique**: ρ₋/ρ₊ = 64 (simulations DESY 1992, JP Petit)
+- **Mécanisme**: Accélération par répulsion gravitationnelle ∝ √(ρ₋/ρ₊)
+
+### Nouveaux Résultats (Version 2.0)
+
+**Avec paramètres astrophysiques réalistes** (SFR=800, ε=0.70, f=0.90):
+
+| Modèle | χ² | Tensions | Amélioration |
+|--------|-----|----------|--------------|
+| ΛCDM | 5360 | 16/16 | --- |
+| JANUS (ρ₋/ρ₊=64) | 3673 | 16/16 | **31.5%** |
+| JANUS (ρ₋/ρ₊=256) | 3181 | 16/16 | **40.6%** |
+
+**Conclusion**: JANUS avec physique correcte améliore significativement le χ² par rapport à ΛCDM, mais tensions persistent pour toutes les galaxies.
+
+**Documents v2.0**:
+- Analyse: `scripts/analysis_janus_correct_physics.py`
+- Publication: `papers/draft_preprint/janus_jwst_v2_correct_physics.pdf`
+- Résultats: `analyses/RESULTATS_JANUS_CORRECT_20260103.md`
 
 ---
 
@@ -17,9 +47,15 @@ Les observations récentes du JWST révèlent des **galaxies massives et évolu�
 
 ### Hypothèse JANUS
 
-Le modèle cosmologique bi-métrique **JANUS** prédit une formation accélérée des structures via des "ponts spatiaux" entre secteurs de matière positive (+m) et négative (-m), permettant une croissance gravitationnelle amplifiée d'un facteur α (typiquement α = 2-5).
+Le modèle cosmologique bi-métrique **JANUS** (Janus cosmological model with negative mass) est basé sur deux secteurs de matière couplés:
+- **Secteur +m**: Matière ordinaire (baryons, matière noire positive)
+- **Secteur -m**: Matière à masse négative (répulsive)
 
-**Notre hypothèse**: JANUS explique naturellement les observations JWST sans nécessiter d'ajustements ad hoc des paramètres de formation stellaire.
+**Mécanisme physique**: La répulsion gravitationnelle du secteur -m accélère l'effondrement gravitationnel dans le secteur +m, permettant une formation plus rapide des structures.
+
+**Paramètre fondamental**: Rapport de densité **ρ₋/ρ₊ ≈ 64** (valeur historique des simulations DESY 1992)
+
+**Notre hypothèse**: JANUS explique naturellement les observations JWST grâce à cette accélération physique, sans nécessiter de paramètres ad hoc.
 
 ---
 
@@ -58,11 +94,14 @@ Le modèle cosmologique bi-métrique **JANUS** prédit une formation accéléré
 M_max(z) = SFR_max × t_cosmique(z) × efficacité × f_temps
 ```
 
-**2. JANUS (modèle bi-métrique)**:
+**2. JANUS (modèle bi-métrique)** - VERSION CORRIGÉE v2.0:
 ```
-M_max(z) = SFR_max × [α × t_cosmique(z)] × efficacité × f_temps
+M_max(z) = SFR_max × t_cosmique(z) × efficacité × f_temps × √(ρ₋/ρ₊)
 ```
-où α est le facteur d'accélération (paramètre libre)
+où ρ₋/ρ₊ est le rapport de densité (matière négative / matière positive)
+
+**Approximation utilisée**: L'accélération de la formation est proportionnelle à √(ρ₋/ρ₊)
+**Valeur historique**: ρ₋/ρ₊ = 64 → accélération ≈ 8×
 
 ### Analyse statistique
 
