@@ -278,8 +278,8 @@ ax1.set_ylabel('log₁₀(M*/M☉)', fontsize=14, fontweight='bold')
 ax1.set_title('JANUS vs ΛCDM - Physique Correcte (ρ₋/ρ₊ = 64)',
               fontsize=16, fontweight='bold')
 ax1.set_xlim(10.4, 14.6)
-ax1.set_ylim(7.0, 10.2)
-ax1.legend(fontsize=10, loc='upper right')
+ax1.set_ylim(3.5, 10.2)  # Étendu pour montrer les prédictions ΛCDM et JANUS
+ax1.legend(fontsize=9, loc='upper left')
 ax1.grid(True, alpha=0.3)
 
 # Subplot 2: χ² vs rapport de densité
