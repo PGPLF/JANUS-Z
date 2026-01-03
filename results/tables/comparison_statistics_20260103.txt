@@ -1,0 +1,23 @@
+======================================================================
+JANUS vs ΛCDM - Résultats de l'analyse comparative
+Date: 2026-01-03T11:40:13.391783Z
+======================================================================
+
+DONNÉES:
+  Nombre de galaxies: 16
+  Redshift range: 10.60 - 14.32
+  Masse range: log(M*/M☉) = 8.7 - 9.8
+
+ΛCDM:
+  χ² = 10517.34
+  χ²_red = 657.33
+  Galaxies en tension: 16/16 (100.0%)
+
+JANUS (α=3.0):
+  χ² = 9194.31
+  χ²_red = 612.95
+  Galaxies en tension: 16/16 (100.0%)
+
+COMPARAISON BAYÉSIENNE:
+  ΔBIC = 1320.25
+  Évidence: TRÈS FORTE pour Modèle 2

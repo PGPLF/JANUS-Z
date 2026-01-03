@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "date": "2026-01-03T11:40:13.391783Z",
+    "version": "1.0",
+    "n_galaxies": 16
+  },
+  "LCDM": {
+    "chi2": 10517.336472300462,
+    "chi2_reduced": 657.3335295187788,
+    "tension_count": 16,
+    "tension_fraction": 1.0
+  },
+  "JANUS": {
+    "alpha_default": 3.0,
+    "chi2": 9194.310636394315,
+    "chi2_reduced": 612.9540424262876,
+    "tension_count": 16,
+    "tension_fraction": 1.0,
+    "all_alpha_results": {
+      "alpha_2.0": {
+        "chi2": 9672.23431254594,
+        "tension_count": 16
+      },
+      "alpha_2.5": {
+        "chi2": 9407.713399005379,
+        "tension_count": 16
+      },
+      "alpha_3.0": {
+        "chi2": 9194.310636394315,
+        "tension_count": 16
+      },
+      "alpha_3.5": {
+        "chi2": 9015.794186385623,
+        "tension_count": 16
+      },
+      "alpha_4.0": {
+        "chi2": 8862.573040454492,
+        "tension_count": 16
+      }
+    }
+  },
+  "bayesian_comparison": {
+    "delta_BIC": 1320.2532471839058,
+    "evidence": "TR\u00c8S FORTE pour Mod\u00e8le 2"
+  }
+}

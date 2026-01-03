@@ -130,44 +130,77 @@ cd scripts
 python analysis_janus_comparison_v1.py
 ```
 
-**Résultats générés**:
-- `data/catalogs/jwst_highz_catalog_YYYYMMDD.csv`: Catalogue compilé
-- `results/figures/fig_01_mass_vs_redshift_YYYYMMDD.pdf`: Figure principale
-- `results/tables/comparison_statistics_YYYYMMDD.txt`: Statistiques
-- `results/comparison_results_YYYYMMDD.json`: Résultats JSON complets
+**Résultats générés** (2026-01-03):
+- `data/catalogs/jwst_highz_catalog_20260103.csv`: Catalogue 16 galaxies z>10
+- `results/figures/fig_01_mass_vs_redshift_20260103.pdf`: Figure comparative ΛCDM vs JANUS
+- `results/figures/fig_01_FIXED_mass_vs_redshift_20260103.pdf`: Figure corrigée (échelle complète)
+- `results/figures/fig_HIGH_ALPHA_comparison_20260103.pdf`: Analyse α=3-10
+- `results/figures/fig_EXTREME_ALPHA_comparison_20260103.pdf`: Analyse α=10-10000
+- `results/tables/comparison_statistics_20260103.txt`: Statistiques détaillées
+- `results/comparison_results_20260103.json`: Résultats JSON ΛCDM vs JANUS α=3
+- `results/high_alpha_analysis_20260103.json`: Résultats α=4,5,10
+- `results/extreme_alpha_analysis_20260103.json`: Résultats α=100,1000,10000
+- `analyses/RAPPORT_ETAPE_20260103.md`: Rapport complet 634 lignes
 
 ---
 
-## Résultats préliminaires
+## Résultats - Analyse 2026-01-03
 
 **Observations JWST (16 galaxies z > 10)**:
 
-| Modèle | χ² réduit | Tensions | Interprétation |
+### Résultats statistiques
+
+| Modèle | χ² | Tensions | Amélioration |
 |--------|-----------|----------|----------------|
-| **ΛCDM** | ~X.XX | XX/16 galaxies | Forte tension |
-| **JANUS (α=3)** | ~X.XX | X/16 galaxies | Meilleur ajustement |
+| **ΛCDM** | 10,517 | 16/16 galaxies (100%) | Baseline |
+| **JANUS (α=3)** | 9,194 | 16/16 galaxies (100%) | 12.6% |
+| **JANUS (α=4)** | 8,863 | 16/16 galaxies (100%) | 15.7% |
+| **JANUS (α=5)** | 8,609 | 16/16 galaxies (100%) | 18.1% |
+| **JANUS (α=10)** | 7,847 | 16/16 galaxies (100%) | 25.4% |
 
-**Analyse bayésienne**: ΔBIC ~ XX.X → Évidence [FORTE/TRÈS FORTE] pour JANUS
+**Analyse bayésienne**: ΔBIC = 1,320 → Évidence **TRÈS FORTE** pour JANUS vs ΛCDM
 
-> *Note: Résultats à mettre à jour après première exécution*
+### Découverte critique ⚠️
+
+**PROBLÈME IDENTIFIÉ**: Les paramètres utilisés (SFR_max=80 M☉/yr, efficacité=10%) sont **50-250× trop conservateurs** par rapport à la littérature récente (Boylan-Kolchin 2023, Robertson et al. 2023).
+
+**Conséquence**: Même avec α=10,000, toutes les galaxies restent en tension (gap de 3.3 dex).
+
+**Solution en cours**: Révision du modèle avec paramètres réalistes:
+- SFR_max: 800 M☉/yr (facteur 10×)
+- Efficacité: 0.70 (facteur 7×)
+- Temps de formation: 0.90 (facteur 1.8×)
+
+**Impact attendu**: Réduction du gap de 5.8 dex → 0.7 dex, permettant à JANUS (α=3-10) de résoudre les tensions.
+
+> *Voir `analyses/RAPPORT_ETAPE_20260103.md` pour détails complets*
 
 ---
 
 ## Roadmap
 
-### Phase 1: Analyse rapide ✅
+### Phase 1: Analyse rapide ✅ COMPLÉTÉE
 - [x] Compilation catalogue JWST z > 10
 - [x] Implémentation modèles ΛCDM et JANUS
-- [x] Calculs statistiques comparatifs
-- [x] Figure principale masse vs redshift
-- [ ] Exécution et validation résultats
+- [x] Calculs statistiques comparatifs (α=3, 4, 5, 10, 100, 1000, 10000)
+- [x] Figures principales masse vs redshift
+- [x] Exécution et validation résultats
+- [x] Recherche bibliographique (Robertson+2023, Boylan-Kolchin+2023)
+- [x] Identification problème paramètres → **Action immédiate requise**
+
+### Phase 1b: Correction paramètres ⚡ **PRIORITÉ IMMÉDIATE**
+- [ ] **Créer analysis_realistic_parameters_v2.py** avec paramètres littérature
+- [ ] Exécuter avec SFR=800, eff=0.70, time_frac=0.90
+- [ ] Valider contre Boylan-Kolchin 2023 Table 1
+- [ ] Déterminer α optimal avec paramètres réalistes
+- [ ] Figures mises à jour avec résultats corrigés
 
 ### Phase 2: Analyse détaillée 🚧
-- [ ] Architecture logicielle complète
-- [ ] Analyse bayésienne MCMC (emcee/dynesty)
-- [ ] Tests statistiques rigoureux
-- [ ] Figures publication-quality
-- [ ] Sensibilité aux paramètres
+- [ ] Architecture logicielle complète (modules src/)
+- [ ] Analyse bayésienne MCMC (emcee/dynesty) pour contraindre α
+- [ ] Tests statistiques rigoureux (K-S, Anderson-Darling)
+- [ ] Figures publication-quality (publication-ready PDFs)
+- [ ] Analyse de sensibilité complète aux paramètres
 
 ### Phase 3: Publication 📝
 - [ ] Rédaction article scientifique

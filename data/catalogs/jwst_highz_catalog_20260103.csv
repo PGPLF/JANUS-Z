@@ -1,0 +1,17 @@
+galaxy_id,redshift,log_stellar_mass,log_mass_err,age_myr,source
+JADES-GS-z14-0,14.32,8.9,0.3,200,Carniani+2024
+JADES-GS-z14-1,14.17,8.7,0.3,180,Carniani+2024
+JADES-GS-z13-0,13.2,9.2,0.25,250,Bunker+2023
+GHZ2,12.63,9.5,0.3,300,Castellano+2024
+GHZ1,12.48,9.3,0.3,280,Castellano+2024
+CEERS-93316,11.58,9.1,0.35,220,Donnan+2023
+Maisie,11.4,9.0,0.3,200,Finkelstein+2022
+GN-z11,10.6,9.8,0.2,350,Oesch+2016
+GLASS-z13,13.1,9.0,0.3,190,Naidu+2022
+GLASS-z12,12.5,9.3,0.25,270,Naidu+2022
+CEERS-1019,11.0,9.4,0.3,260,Harikane+2024
+JADES-GS-z12-0,12.0,8.8,0.35,160,Robertson+2023
+JADES-GS-z11-0,11.1,9.1,0.3,210,Robertson+2023
+UNCOVER-z13,13.0,9.2,0.3,240,Atek+2023
+CEERS-z11,11.3,9.0,0.3,205,Harikane+2024
+Abell2744-z12,12.2,9.4,0.3,285,Yan+2023

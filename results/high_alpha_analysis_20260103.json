@@ -1,0 +1,33 @@
+{
+  "date": "2026-01-03T12:55:00.645123",
+  "n_galaxies": 16,
+  "LCDM": {
+    "chi2": 10517.336472300462,
+    "tension_count": 16
+  },
+  "JANUS_results": {
+    "alpha_3.0": {
+      "chi2": 9194.310636394315,
+      "tension_count": 16,
+      "improvement_percent": 12.579476176222023
+    },
+    "alpha_4.0": {
+      "chi2": 8862.573040454492,
+      "tension_count": 16,
+      "improvement_percent": 15.733673979187834
+    },
+    "alpha_5.0": {
+      "chi2": 8609.46154436042,
+      "tension_count": 16,
+      "improvement_percent": 18.14028611678268
+    },
+    "alpha_10.0": {
+      "chi2": 7846.6505773785375,
+      "tension_count": 16,
+      "improvement_percent": 25.393177274072354
+    }
+  },
+  "best_alpha": 10.0,
+  "best_chi2": 7846.6505773785375,
+  "best_tensions": 16
+}
