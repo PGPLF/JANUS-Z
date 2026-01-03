@@ -1,8 +1,8 @@
 # JANUS-Z - Analyse Cosmologique JANUS vs ΛCDM
 
 **Date de création**: 2025-12-08
-**Dernière mise à jour**: 2026-01-03 14:40 UTC
-**Statut**: Phase 2.0 - PHYSIQUE JANUS CORRIGÉE
+**Dernière mise à jour**: 2026-01-03 15:15 UTC
+**Statut**: Version 3.0 - ÉQUATIONS BIMÉTRIQUE COMPLÈTES
 **Objectif**: Publication scientifique académique
 
 ---
@@ -34,6 +34,64 @@
 - Analyse: `scripts/analysis_janus_correct_physics.py`
 - Publication: `papers/draft_preprint/janus_jwst_v2_correct_physics.pdf`
 - Résultats: `analyses/RESULTATS_JANUS_CORRECT_20260103.md`
+
+---
+
+## ⭐ VERSION 3.0 - ÉQUATIONS BIMÉTRIQUE COMPLÈTES (2026-01-03)
+
+### Amélioration Théorique
+
+**PROGRESSION**: v2.0 (approximation √ξ) → v3.0 (dérivation rigoureuse √(1+χξ))
+
+**Formule v3.0** dérivée des équations de perturbation linéaire dans espace bimétrique:
+```
+f_accel = √(1 + χ·ξ)
+```
+
+où:
+- **ξ = ρ₋/ρ₊**: Rapport de densité (comme v2.0)
+- **χ ∈ [0,1]**: Force du couplage bimétrique (**NOUVEAU**)
+
+### Fondement Mathématique
+
+Équation de croissance des perturbations:
+```
+δ̈ + 2H δ̇ = 4πG(ρ₊ + χ·ρ₋)δ
+```
+
+**Limites correctes**:
+- ξ → 0: f_accel → 1 (ΛCDM) ✓
+- χ = 0: f_accel = 1 (découplage) ✓
+- ξ >> 1, χ=1: f_accel ≈ √ξ (retrouve v2.0) ✓
+
+### Résultats Version 3.0
+
+| Modèle | Formule | χ² | Amélioration vs ΛCDM | Amélioration vs v2.0 |
+|--------|---------|-----|----------------------|----------------------|
+| ΛCDM | --- | 4145 | --- | --- |
+| JANUS v2.0 | √ξ | 2439 | 41.2% | --- |
+| **JANUS v3.0** | **√(1+χξ)** | **2433** | **41.3%** | **+0.23%** |
+
+**Nouveau paramètre χ** (ξ=64):
+
+| Couplage χ | f_accel | χ² | Amélioration |
+|------------|---------|-----|--------------|
+| 0.50 | 5.74 | 2680 | 35.3% |
+| 0.75 | 7.00 | 2535 | 38.9% |
+| **1.00** | **8.06** | **2433** | **41.3%** |
+
+**Interprétation**:
+- Amélioration numérique marginale (Δχ² = -5.5)
+- **Fondement théorique solide** (dérivation depuis équations bimétrique)
+- Nouveau paramètre observable χ
+- Base rigoureuse pour extensions futures (cosmologie complète, non-linéaire)
+
+**Documents v3.0**:
+- Analyse: `scripts/analysis_janus_v3_bimetric.py`
+- Publication: `papers/draft_preprint/janus_jwst_v3_bimetric_full.pdf` (6 pages)
+- Plan détaillé: `analyses/PLAN_VERSION_3_BIMETRIC.md`
+- Synthèse v1-v2-v3: `analyses/SYNTHESE_V1_V2_V3.md`
+- Figures: `results/figures/fig_V2_VS_V3_COMPARISON_20260103.pdf`
 
 ---
 
