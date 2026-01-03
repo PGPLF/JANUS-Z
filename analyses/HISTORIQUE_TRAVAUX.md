@@ -234,4 +234,4 @@ Facteur correction: 126×
 ---
 
 *Document créé le 2026-01-03 13:50 UTC*
-*Auteur: Patrick Guerin (avec Claude Sonnet 4.5)*
+*Auteur: Patrick Guerin*

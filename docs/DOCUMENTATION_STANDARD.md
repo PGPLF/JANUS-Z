@@ -2,7 +2,7 @@
 
 **Date**: 2026-01-03 12:35 UTC
 **Version**: 1.0
-**Auteur**: Claude Sonnet 4.5
+**Auteur**: Patrick Guerin
 
 ---
 

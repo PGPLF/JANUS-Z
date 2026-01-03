@@ -3,7 +3,7 @@
 **OBJECTIF**: Publication scientifique testant le modèle JANUS vs ΛCDM avec données JWST
 
 **DATE**: 2026-01-03 13:10 UTC
-**AUTEUR**: Patrick Guerin (avec Claude Sonnet 4.5)
+**AUTEUR**: Patrick Guerin
 **VERSION**: 1.0
 
 ---
@@ -628,7 +628,6 @@ Si les paramètres réalistes + JANUS résolvent les tensions avec α raisonnabl
 
 ---
 
-*Rapport généré par: Claude Sonnet 4.5*
-*Pour: Dr. Patrick Guerin*
+*Auteur: Patrick Guerin*
 *Projet: JANUS-Z Cosmological Analysis*
 *Date: 2026-01-03 13:10 UTC*

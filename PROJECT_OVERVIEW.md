@@ -180,7 +180,7 @@ DATE: [YYYY-MM-DD HH:MM UTC]
 
 ---
 
-**Document préparé par**: Claude Sonnet 4.5
+**Document préparé par**: Patrick Guerin
 **Pour**: Dr. Patrick Guerin
 **Projet**: JANUS-Z Cosmological Analysis
 **Version**: 1.0

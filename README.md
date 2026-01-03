@@ -364,7 +364,6 @@ GitHub repository: https://github.com/PGPLF/JANUS-Z
 - **JWST Science Team** pour les observations exceptionnelles
 - **Archive MAST** pour l'accès aux données
 - **Équipes JADES, CEERS, UNCOVER** pour les catalogues publiés
-- **Claude Sonnet 4.5** pour l'assistance au développement
 
 ---
 

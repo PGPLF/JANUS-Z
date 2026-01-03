@@ -7,8 +7,8 @@
 
 ## ✅ Ce qui a été fait
 
-### 1. Analyse complète de la conversation Claude
-- Extraction du fichier RTF converti en TXT
+### 1. Analyse complète des échanges précédents
+- Extraction et analyse du contexte scientifique
 - Compréhension du contexte scientifique complet
 - Identification de l'objectif: publication académique JANUS vs ΛCDM
 
