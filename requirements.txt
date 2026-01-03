@@ -1,0 +1,20 @@
+# JANUS-Z - Python Dependencies
+# Date: 2026-01-03
+# Python version: >= 3.11
+
+# Core scientific computing
+numpy>=2.0.0
+scipy>=1.10.0
+pandas>=2.0.0
+
+# Plotting and visualization
+matplotlib>=3.8.0
+
+# Astronomy and cosmology
+astropy>=7.0.0
+astroquery>=0.4.11
+
+# For Phase 2 - Bayesian analysis (optional for now)
+# emcee>=3.1.0
+# dynesty>=2.1.0
+# corner>=2.2.0
