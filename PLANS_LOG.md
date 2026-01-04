@@ -174,7 +174,7 @@ Integration finale de toutes les ameliorations v17.x.
 | v17.0 | Multiple | 2026-01-04 | Initial v17 |
 | v17.1 | `6dbe06a` | 2026-01-04 | Extended catalog 236 galaxies |
 | v17.1a | `879dd5c` | 2026-01-04 | Fix URL overflow |
-| v17.2 | `TBD` | 2026-01-04 | Bootstrap + sensitivity |
+| v17.2 | `6bc1dfa` | 2026-01-04 | Bootstrap + sensitivity |
 
 ---
 
