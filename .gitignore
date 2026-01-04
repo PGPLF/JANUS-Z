@@ -74,3 +74,6 @@ screenshot*.png
 
 # Archive (work in progress)
 archive/
+
+# Large data files (download separately)
+*.tgz
