@@ -5,6 +5,29 @@ All notable changes to the JANUS-Z project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.1] - 2026-01-04
+
+### Added
+- **Extended catalog**: 236 galaxies at 6.50 < z < 14.52 (+36 from v17.0)
+- **2 new proto-clusters**: GLASS-z10-PC (5 members, z=10.13), A2744-z9-PC (4 members, z=9.04)
+- **New catalog columns**: sigma_v (velocity dispersion) and log_Mvir (virial mass) for 27 galaxies
+- **Expanded dusty sample**: 24 NIRCam-dark galaxies (×6 from v17.0)
+- **Extended metallicity**: 135 galaxies with 12+log(O/H) measurements (55 → 135)
+- 6 proto-clusters total with 26 spectroscopic members
+
+### Changed
+- Proto-cluster analysis: 4 → 6 clusters with detailed sigma_v and log_Mvir
+- Redshift range extended: 6.50 < z < 14.52
+- Spectroscopic fraction improved: 39.4% (93/236)
+- Updated figures: fig_v17.1_killer_plot_suite.pdf, fig_v17.1_clustering_analysis.pdf,
+  fig_v17.1_metallicity_evolution.pdf, fig_v17.1_mcmc_posteriors.pdf
+
+### Files
+- `data/jwst_extended_catalog_v17.1.csv`: Extended catalog with 236 galaxies
+- `scripts/analysis_janus_v17.1_extended.py`: Updated analysis script
+- `papers/draft_preprint/janus_v17.1_extended.pdf`: Publication (11 pages)
+- `results/janus_v17.1_comprehensive_results.json`: Full analysis results
+
 ## [17.0] - 2026-01-04
 
 ### Added

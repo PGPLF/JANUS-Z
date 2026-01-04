@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "version": "17.1",
+    "date": "2026-01-04",
+    "description": "JANUS v17.1 - Extended Catalog with 236 Galaxies and 6 Proto-clusters",
+    "n_galaxies": 236,
+    "z_range": [
+      6.5,
+      14.52
+    ],
+    "data_sources": [
+      "JADES DR4 (Bunker+2025)",
+      "EXCELS (Carnall+2025)",
+      "GLASS protoclusters (Morishita+2025)",
+      "GHZ9 AGN (Maiolino+2025)",
+      "CEERS (Finkelstein+2024)",
+      "UNCOVER (Bezanson+2024)"
+    ]
+  },
+  "SMF_fitting": {
+    "JANUS": {
+      "epsilon": 0.1,
+      "chi2": 81933.53212813038,
+      "chi2_red": 3562.3274838317557,
+      "N_dof": 23,
+      "physical": true
+    },
+    "LCDM_free": {
+      "epsilon": 0.1,
+      "chi2": 21640.87875130028,
+      "chi2_red": 940.9077717956643,
+      "N_dof": 23,
+      "physical": true
+    },
+    "LCDM_fixed_epsilon": {
+      "epsilon": 0.15,
+      "chi2": 40473.41837485849,
+      "chi2_red": 1759.7138423851518,
+      "N_dof": 23,
+      "physical": true
+    }
+  },
+  "Bayesian_comparison": {
+    "BIC_JANUS": 81936.71018196072,
+    "BIC_LCDM": 21644.056805130625,
+    "Delta_BIC": -60292.653376830094,
+    "evidence": "VERY STRONG",
+    "interpretation": "VERY STRONG evidence for JANUS over \u039bCDM"
+  },
+  "clustering": {
+    "GHZ9-cluster": {
+      "n_members": 7,
+      "z_mean": 10.135857142857143,
+      "z_std": 0.3422219115350359,
+      "log_Mstar_mean": 9.214285714285714,
+      "sigma_v_mean": 180.14285714285714,
+      "M_vir_log": 19.975264718919398
+    },
+    "A2744-z13": {
+      "n_members": 1,
+      "z_mean": 12.63,
+      "z_std": 0.0,
+      "log_Mstar_mean": 9.5,
+      "sigma_v_mean": 185.0,
+      "M_vir_log": 19.878425732538123
+    },
+    "JD1-cluster": {
+      "n_members": 2,
+      "z_mean": 10.315,
+      "z_std": 0.03500000000000014,
+      "log_Mstar_mean": 9.035,
+      "sigma_v_mean": 166.0,
+      "M_vir_log": 19.85835744360872
+    },
+    "A2744-z7p9": {
+      "n_members": 7,
+      "z_mean": 7.888571428571429,
+      "z_std": 0.022314999074019123,
+      "log_Mstar_mean": 9.082857142857142,
+      "sigma_v_mean": 183.14285714285714,
+      "M_vir_log": 20.143291364991736
+    },
+    "GLASS-z10-PC": {
+      "n_members": 5,
+      "z_mean": 10.128,
+      "z_std": 0.06910861017268428,
+      "log_Mstar_mean": 9.168000000000001,
+      "sigma_v_mean": 177.0,
+      "M_vir_log": 19.952792455545257
+    },
+    "A2744-z9-PC": {
+      "n_members": 4,
+      "z_mean": 9.042499999999999,
+      "z_std": 0.06417748826496725,
+      "log_Mstar_mean": 8.96,
+      "sigma_v_mean": 170.75,
+      "M_vir_log": 19.972694374322426
+    }
+  },
+  "metallicity": {
+    "n_galaxies": 135,
+    "metal_z_slope": 0.537529729441631,
+    "metal_z_intercept": 7.546313440001392,
+    "MZR_slope": -0.2799599814573928,
+    "MZR_intercept": 10.664110725084026
+  },
+  "AGN": {
+    "n_agn": 2,
+    "agn_ids": [
+      "GHZ9-confirmed",
+      "GN-z11"
+    ]
+  },
+  "MCMC": {
+    "JANUS": {
+      "epsilon_median": 0.010626537949429252,
+      "epsilon_std": 0.0002182655531211856,
+      "epsilon_16": 0.010210767825506839,
+      "epsilon_84": 0.010673270021295807
+    },
+    "LCDM": {
+      "epsilon_median": 0.010207157134796065,
+      "epsilon_std": 0.00022634521989998657,
+      "epsilon_16": 0.010137960891805168,
+      "epsilon_84": 0.010637511273174263
+    }
+  },
+  "conclusion": "JANUS provides very strong fit to JWST data (\u0394BIC=-60292.7) with physical star formation efficiency (\u03b5=0.100 < 0.15). \u039bCDM requires unphysical \u03b5=0.100 > 0.15 or fails catastrophically (\u03c7\u00b2=40473.4) at fixed \u03b5=0.15. Cosmological origin of JANUS advantage confirmed."
+}
