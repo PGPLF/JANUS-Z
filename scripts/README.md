@@ -1,6 +1,6 @@
 # Scripts JANUS-Z
 
-**Dernière mise à jour**: 2026-01-04 (v17.3)
+**Dernière mise à jour**: 2026-01-05 (v17.4)
 **Statut**: Production
 
 Ce dossier contient les scripts d'analyse pour la validation du modèle cosmologique JANUS bimétrique.
@@ -9,9 +9,30 @@ Ce dossier contient les scripts d'analyse pour la validation du modèle cosmolog
 
 ## Scripts Principaux (Version 17.x)
 
-### ⭐ `analysis_janus_v17.3_mcmc.py`
+### ⭐ `analysis_janus_v17.4_cii_lf.py`
 
-**Statut**: CURRENT (v17.3)
+**Statut**: CURRENT (v17.4)
+**Description**: [CII] 158um Luminosity Function analysis for dusty galaxies
+
+**Nouveautés v17.4**:
+- Conversion SFR -> L_[CII] (De Looze+2014)
+- Construction LF [CII] observée
+- Prédictions Schechter JANUS/LCDM
+- Comparaison chi2/BIC
+
+**Résultats clés**:
+- 24 dusty galaxies A3COSMOS
+- ΔBIC = 1.1 (INCONCLUS - échantillon trop petit)
+
+**Sorties**:
+- `results/janus_v17.4_cii_lf_results.json`
+- `results/figures/fig_v17.4_*.pdf` (4 figures)
+
+---
+
+### `analysis_janus_v17.3_mcmc.py`
+
+**Statut**: Archived (v17.3)
 **Description**: Full MCMC analysis with 100,000 iterations, convergence diagnostics, and checkpointing
 
 **Nouveautés v17.3**:

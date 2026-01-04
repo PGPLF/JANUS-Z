@@ -1,0 +1,81 @@
+{
+  "version": "17.4",
+  "description": "[CII] Luminosity Function Analysis",
+  "date": "2026-01-05",
+  "catalog": {
+    "n_dusty": 24,
+    "z_range": [
+      6.51,
+      8.49
+    ],
+    "L_CII_range": [
+      1288249551.6931322,
+      81283051616.40996
+    ],
+    "SFR_range": [
+      112.2018454301963,
+      7079.457843841381
+    ]
+  },
+  "LF_observed": {
+    "log_L_centers": [
+      8.25,
+      8.75,
+      9.25,
+      9.75,
+      10.25
+    ],
+    "phi": [
+      0.0,
+      0.0,
+      2.994343119447328e-07,
+      7.48585779861832e-08,
+      9.731615138203816e-07
+    ],
+    "phi_err": [
+      7.48585779861832e-08,
+      7.48585779861832e-08,
+      1.497171559723664e-07,
+      7.48585779861832e-08,
+      2.699064413375033e-07
+    ],
+    "counts": [
+      0,
+      0,
+      4,
+      1,
+      13
+    ],
+    "volume_Mpc3": 26717045.044178426,
+    "n_galaxies": 24
+  },
+  "models": {
+    "JANUS": {
+      "L_star": 8000624975.587846,
+      "phi_star": 1.6660153205632466e-05,
+      "alpha": -1.8,
+      "normalization": 0.0029907226562491144,
+      "chi2": 12.827266823359691,
+      "BIC": 13.9258791120278
+    },
+    "LCDM": {
+      "L_star": 1000000000.0,
+      "phi_star": 1.6660153205632466e-05,
+      "alpha": -1.8,
+      "normalization": 0.07382812499999919,
+      "chi2": 13.932785490448083,
+      "BIC": 15.031397779116192
+    }
+  },
+  "comparison": {
+    "delta_chi2": 1.1055186670883916,
+    "delta_BIC": 1.1055186670883916,
+    "preferred_model": "LCDM",
+    "evidence_strength": "inconclusive"
+  },
+  "De_Looze_relation": {
+    "equation": "log(L_CII/Lsun) = 1.0 * log(SFR) + 7.06",
+    "scatter_dex": 0.3,
+    "reference": "De Looze et al. 2014"
+  }
+}

@@ -5,6 +5,35 @@ All notable changes to the JANUS-Z project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.4] - 2026-01-05
+
+### Added
+- **[CII] Luminosity Function analysis**: Quantitative test of dusty galaxies via [CII] 158um
+- **De Looze et al. (2014) calibration**: SFR to L_[CII] conversion with 0.3 dex scatter
+- **Schechter LF predictions**: JANUS (L* enhanced x8) vs LCDM theoretical LFs
+- New figure: `fig_v17.4_cii_luminosity_function.pdf` (observed vs predicted LF)
+- New figure: `fig_v17.4_cii_sfr_relation.pdf` (L_[CII] vs SFR with De Looze relation)
+- New figure: `fig_v17.4_dusty_mass_sfr.pdf` (M*-SFR diagram for dusty galaxies)
+- New figure: `fig_v17.4_cii_killer_plot.pdf` (combined LF + chi2 + BIC comparison)
+
+### [CII] LF Results
+- **24 dusty galaxies** from A3COSMOS (z = 6.51 - 8.49)
+- L_[CII] range: 10^9.1 - 10^10.9 Lsun (all bright-end)
+- JANUS: chi2 = 12.8, BIC = 13.9
+- LCDM: chi2 = 13.9, BIC = 15.0
+- **Delta_BIC = 1.1 (INCONCLUSIVE)**
+
+### Notes
+- Small sample size (N=24) limits statistical power
+- All galaxies at bright-end of LF (log L > 9)
+- Orthogonal validation to UV-selected SMF but requires larger samples
+- Future: ALMA REBELS DR2 will provide 100+ dusty galaxies
+
+### Files
+- `scripts/analysis_janus_v17.4_cii_lf.py`: [CII] LF analysis script
+- `results/janus_v17.4_cii_lf_results.json`: Complete results
+- `results/figures/fig_v17.4_*.pdf`: 4 new figures
+
 ## [17.3] - 2026-01-04
 
 ### Added

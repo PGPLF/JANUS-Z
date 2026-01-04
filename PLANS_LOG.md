@@ -13,8 +13,8 @@ Permet la reversibilite et le suivi des travaux.
 | v17.1 | Catalogue etendu 236 galaxies, 6 proto-clusters, sigma_v + log_Mvir | Termine |
 | v17.1a | Fix URL overflow Data Availability | Termine |
 | v17.2 | Bootstrap p-values + epsilon sensitivity | Termine |
-| v17.3 | MCMC complet (emcee, 10^5 samples) | Planifie |
-| v17.4 | Test quantitatif dusty galaxies ([CII] LF) | Planifie |
+| v17.3 | MCMC complet (emcee, 10^5 samples) | Termine |
+| v17.4 | Test quantitatif dusty galaxies ([CII] LF) | Termine |
 | v18.0 | Integration finale | Planifie |
 
 ---
@@ -207,16 +207,85 @@ thin_factor = auto      # Base sur autocorrelation time
 
 ---
 
-## [v17.4] - PLANIFIE
+## [v17.4] - EN COURS
 
 ### Objectif
-Test quantitatif des dusty galaxies via [CII] Luminosity Function.
+Test quantitatif des dusty galaxies via [CII] 158um Luminosity Function. Validation orthogonale independante de la selection UV.
 
-### Etapes prevues
-1. Compiler donnees [CII] 158um pour dusty galaxies
-2. Calculer LF [CII] observee vs predictions JANUS/LCDM
-3. Chi2 comparison sur LF [CII]
-4. Integration avec SMF pour test combine
+### Donnees disponibles
+- 24 dusty galaxies A3COSMOS (is_dusty=1)
+- Redshift: z = 6.51 - 8.49
+- Masses stellaires: log(M*/Msun) = 10.1 - 10.57
+- SFR: 112 - 7079 Msun/yr (tres eleves)
+
+### Methodologie [CII] LF
+
+#### 1. Calcul L_[CII] depuis SFR
+Relation De Looze et al. (2014), calibree ALMA:
+```
+log(L_[CII]/Lsun) = 1.0 × log(SFR) + 7.06
+```
+Dispersion: sigma = 0.3 dex
+
+#### 2. Construction LF [CII] observee
+- Bins en L_[CII]: [10^8, 10^8.5, 10^9, 10^9.5, 10^10] Lsun
+- Correction completude A3COSMOS (fonction z, L)
+- Volumes comouvants par bin z
+
+#### 3. Predictions theoriques
+**LCDM**:
+```
+Phi_[CII](L) = Phi*(L/L*)^alpha × exp(-L/L*)
+```
+avec L* et Phi* de Yan+2020, Loiacono+2021
+
+**JANUS**:
+```
+Phi_[CII]_JANUS = f_accel^3 × Phi_[CII]_LCDM
+```
+(facteur ^3 pour densite volumique enhanced)
+
+#### 4. Comparaison statistique
+- chi2 sur bins LF
+- Delta_BIC [CII] independant
+- p-value empirique
+
+### Etapes detaillees
+
+| # | Tache | Description | Fichiers |
+|---|-------|-------------|----------|
+| 1 | Creer script v17.4 | Copier v17.3, ajouter [CII] LF | `scripts/analysis_janus_v17.4_cii_lf.py` |
+| 2 | Calculer L_[CII] | Relation De Looze SFR->L_[CII] | Fonction `compute_L_CII()` |
+| 3 | Construire LF obs | Binning, Vmax, completude | Fonction `compute_CII_LF_observed()` |
+| 4 | Predictions JANUS/LCDM | Schechter LF avec/sans f_accel | Fonction `compute_CII_LF_predicted()` |
+| 5 | Chi2 + BIC | Comparaison statistique | Fonction `compare_CII_models()` |
+| 6 | Generer figures | LF plot, residuels | `results/figures/fig_v17.4_*.pdf` |
+| 7 | Mettre a jour LaTeX | Section [CII] LF | `janus_v17.4_cii_lf.tex` |
+| 8 | Compiler PDF | 2 passes pdflatex | `janus_v17.4_cii_lf.pdf` |
+| 9 | Mettre a jour docs | CHANGELOG, README | - |
+| 10 | Commit & Push | GitHub | - |
+
+### Nouvelles figures
+
+| Figure | Contenu |
+|--------|---------|
+| `fig_v17.4_cii_luminosity_function.pdf` | LF [CII] obs vs JANUS vs LCDM |
+| `fig_v17.4_cii_sfr_relation.pdf` | L_[CII] vs SFR avec relation De Looze |
+| `fig_v17.4_dusty_mass_sfr.pdf` | Diagramme M*-SFR dusty galaxies |
+
+### Livrables attendus
+
+- `scripts/analysis_janus_v17.4_cii_lf.py`
+- `results/janus_v17.4_cii_lf_results.json`
+- `results/figures/fig_v17.4_*.pdf` (3+ figures)
+- `papers/draft_preprint/janus_v17.4_cii_lf.pdf`
+
+### References cles
+
+- De Looze et al. 2014: SFR-L_[CII] calibration
+- Yan et al. 2020: [CII] LF z~5-7
+- Loiacono et al. 2021: ALPINE [CII] LF
+- A3COSMOS 2025: arXiv:2511.08672
 
 ---
 
