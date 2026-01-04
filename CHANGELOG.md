@@ -41,6 +41,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added velocity dispersion measurements (sigma_v ~ 180 km/s)
 - Professional twocolumn format with booktabs tables
 
+## [15.1] - 2026-01-04
+
+### Fixed
+- **Figure 1 (Killer Plot)**: Replaced placeholder text "(to be generated)" with actual figure `fig_v15_killer_plot.pdf`
+- Integrated SMF at z=12 visualization showing JANUS vs ΛCDM comparison
+
+### Changed
+- Renamed files: `janus_v15_robust_statistics.*` → `janus_v15.1_robust_statistics.*`
+
 ## [15.0] - 2026-01-04
 
 ### Added

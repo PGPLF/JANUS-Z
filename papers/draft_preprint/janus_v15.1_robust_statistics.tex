@@ -37,7 +37,7 @@
 \small \url{https://github.com/PGPLF/JANUS-Z}\\
 \small (includes README, requirements.txt, and reproduction instructions).}
 
-\date{January 4, 2026 (v15.0)}
+\date{January 4, 2026 (v15.1)}
 
 \begin{document}
 
@@ -309,21 +309,12 @@ Status & Failed & Match \\
 
 \subsection{The "Killer Plot": Fixed-Astrophysics Comparison}
 
-\textbf{Figure~\ref{fig:killer}} (to be generated) shows the stellar mass function at $z = 12$ (bin $11 < z < 13$):
+\textbf{Figure~\ref{fig:killer}} shows the stellar mass function at $z = 12$ (bin $11 < z < 13$).
 
 \begin{figure}[h]
 \centering
-\textit{[Figure: SMF at z=12]}
-
-\textbf{Data points:} 9 JWST galaxies (black circles with Poisson error bars) spanning $8.5 < \log(M_*/M_\odot) < 9.5$.
-
-\textbf{JANUS prediction} ($\epsilon = 0.15$, blue solid curve): Passes through data points, \chisq{} $\sim 5$ for this bin.
-
-\textbf{\LCDM{} prediction} ($\epsilon = 0.15$, red dashed curve): Systematically $\sim 1$ dex \textit{below} data points across entire mass range, \chisq{} $\sim 40$ for this bin.
-
-\textbf{Interpretation:} At \textit{equal astrophysics} ($\epsilon = 0.15$ consistent with IllustrisTNG), JANUS matches observations while \LCDM{} requires a cosmological boost ($\sim 8\times$ more structure) that it cannot provide. The only way to "save" \LCDM{} is extreme $\epsilon \sim 0.70$ (violating feedback physics) or top-heavy IMF (ad-hoc $z$-evolution).
-
-\caption{Stellar mass function at $z = 12$ for fixed $\epsilon = 0.15$. JANUS (blue) matches data; \LCDM{} (red) fails by factor $\sim 10$ in number density. This demonstrates the cosmological origin of the discrepancy.}
+\includegraphics[width=\columnwidth]{../../results/figures/fig_v15_killer_plot.pdf}
+\caption{Stellar mass function at $z = 12$ for fixed $\epsilon = 0.15$. \textbf{Data points:} 9 JWST galaxies (black circles with Poisson error bars) spanning $8.5 < \log(M_*/M_\odot) < 9.5$. \textbf{JANUS prediction} (blue solid): Passes through data points. \textbf{\LCDM{} prediction} (red dashed): Systematically $\sim 1$ dex below data. At equal astrophysics, JANUS matches observations while \LCDM{} fails by factor $\sim 10$ in number density, demonstrating the cosmological origin of the discrepancy.}
 \label{fig:killer}
 \end{figure}
 
