@@ -5,6 +5,17 @@ All notable changes to the JANUS-Z project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.1a] - 2026-01-04
+
+### Fixed
+- **Data Availability**: URL A3COSMOS empiétait sur la colonne de droite
+- Raccourcissement des liens URL (affichage texte court au lieu de l'URL complète)
+- JADES DR4: `jades-survey.github.io` (lien cliquable)
+- A3COSMOS: `sites.google.com/view/a3cosmos` (lien cliquable)
+
+### Files
+- `papers/draft_preprint/janus_v17.1a_extended.pdf`: Publication corrigée (11 pages)
+
 ## [17.1] - 2026-01-04
 
 ### Added
