@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+type: software
+title: "JANUS-Z: Testing Bimetric Cosmology with JWST High-Redshift Galaxies"
+version: "17.0"
+date-released: "2026-01-04"
+authors:
+  - family-names: "Guerin"
+    given-names: "Patrick"
+    email: "pg@gfo.bzh"
+    affiliation: "Independent Researcher, Brittany, France"
+repository-code: "https://github.com/PGPLF/JANUS-Z"
+url: "https://github.com/PGPLF/JANUS-Z"
+license: MIT
+keywords:
+  - cosmology
+  - JWST
+  - James Webb Space Telescope
+  - high-redshift galaxies
+  - bimetric gravity
+  - JANUS model
+  - LCDM
+  - structure formation
+  - stellar mass function
+abstract: >-
+  Statistical validation of JANUS bimetric cosmology against the standard
+  LCDM model using 200 spectroscopically confirmed high-redshift galaxies
+  (6.63 < z < 14.32) from JWST observations (JADES DR4, EXCELS, GLASS,
+  A3COSMOS, COSMOS-Web). The analysis includes stellar mass function
+  comparison, proto-cluster dynamics, metallicity evolution, and dusty
+  galaxy tests. Results show JANUS with acceleration factor f = sqrt(xi_0)
+  = 8 (from SNIa constraint xi_0 = 64.01) achieves Delta_BIC = -120,438
+  compared to LCDM, representing very strong Bayesian evidence.
+references:
+  - type: article
+    authors:
+      - family-names: "Petit"
+        given-names: "Jean-Pierre"
+      - family-names: "d'Agostini"
+        given-names: "Gilles"
+    title: "Negative mass hypothesis in cosmology and the nature of dark energy"
+    journal: "Astrophysics and Space Science"
+    year: 2014
+  - type: article
+    authors:
+      - family-names: "Petit"
+        given-names: "Jean-Pierre"
+      - family-names: "d'Agostini"
+        given-names: "Gilles"
+    title: "Constraints on Janus Cosmological Model from Recent Observations of Supernovae Type Ia"
+    journal: "Astrophysics and Space Science"
+    year: 2018
