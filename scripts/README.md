@@ -1,17 +1,63 @@
 # Scripts JANUS-Z
 
-**Dernière mise à jour**: 2026-01-04 (v17.0)
+**Dernière mise à jour**: 2026-01-04 (v17.3)
 **Statut**: Production
 
 Ce dossier contient les scripts d'analyse pour la validation du modèle cosmologique JANUS bimétrique.
 
 ---
 
-## Scripts Principaux (Version 17.0)
+## Scripts Principaux (Version 17.x)
 
-### ⭐ `analysis_janus_v17_jan2026.py`
+### ⭐ `analysis_janus_v17.3_mcmc.py`
 
-**Statut**: CURRENT (v17.0)
+**Statut**: CURRENT (v17.3)
+**Description**: Full MCMC analysis with 100,000 iterations, convergence diagnostics, and checkpointing
+
+**Nouveautés v17.3**:
+- MCMC complet (emcee, 32 walkers, 100k steps)
+- Checkpointing automatique (reprise après interruption)
+- Diagnostics de convergence (τ, n_eff, acceptance rate)
+- Trace plots et autocorrélation
+- Résultats: JANUS ε=0.0106, ΛCDM ε=0.0102
+
+**Données d'entrée**:
+- `data/jwst_extended_catalog_v17.1.csv` (236 galaxies)
+
+**Sorties**:
+- `results/janus_v17.3_mcmc_results.json`
+- `results/checkpoints/mcmc_*.pkl` (checkpoints)
+- `results/figures/fig_v17.3_*.pdf` (9 figures)
+
+**Exécution**:
+```bash
+python3 scripts/analysis_janus_v17.3_mcmc.py
+# ~30-45 min pour 100k steps (reprend automatiquement si interrompu)
+```
+
+---
+
+### `analysis_janus_v17.2_bootstrap.py`
+
+**Statut**: Archived (v17.2)
+**Description**: Bootstrap validation (1000 iterations) + epsilon sensitivity analysis
+
+**Résultats clés**:
+- Bootstrap ΔBIC = -66,311 [-73,259, -59,448] (68% CI)
+- p-value empirique = 1.0000
+
+---
+
+### `analysis_janus_v17.1_extended.py`
+
+**Statut**: Archived (v17.1)
+**Description**: Catalogue étendu 236 galaxies, 6 proto-clusters
+
+---
+
+### `analysis_janus_v17_jan2026.py`
+
+**Statut**: Archived (v17.0)
 **Description**: Analyse comprehensive avec catalogue étendu JWST+ALMA (200 galaxies)
 
 **Fonctionnalités**:
@@ -128,9 +174,9 @@ pip install -r requirements.txt
 - `matplotlib >= 3.8`
 - `astropy >= 7.0`
 
-**Optional** (v18 planned):
-- `emcee` (MCMC)
-- `corner` (Posteriors visualization)
+**Required for v17.3 MCMC**:
+- `emcee >= 3.0` (ensemble sampler)
+- `corner >= 2.2` (posterior visualization)
 
 ---
 
@@ -235,4 +281,4 @@ Pour questions techniques ou collaborations:
 
 **Documentation Scripts JANUS-Z**
 
-*Dernière mise à jour: 2026-01-04 23:30 UTC (v17.0)*
+*Dernière mise à jour: 2026-01-05 00:30 UTC (v17.3)*

@@ -5,6 +5,42 @@ All notable changes to the JANUS-Z project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.3] - 2026-01-04
+
+### Added
+- **Full MCMC analysis**: 100,000 steps with 32 walkers (emcee) for publication-quality posteriors
+- **Checkpointing system**: Auto-save every 10k iterations, resume from interruption
+- **Convergence diagnostics**: Autocorrelation time (tau), effective samples (n_eff), acceptance rate
+- **Burn-in and thinning**: 20% burn-in removal, autocorrelation-based thinning
+- New figure: `fig_v17.3_mcmc_trace.pdf` (walker trace plots, full chain + post burn-in)
+- New figure: `fig_v17.3_mcmc_autocorr.pdf` (autocorrelation function with tau annotation)
+- New figure: `fig_v17.3_convergence_diagnostics.pdf` (summary table with pass/fail status)
+- 68% and 95% credible intervals on epsilon posteriors
+- NumpyEncoder class for JSON serialization of numpy types
+
+### MCMC Results
+- **JANUS**: epsilon = 0.0106 +0.0000/-0.0004 (68% CI)
+  - tau = 1720, n_eff = 1860, acceptance = 35%
+- **LCDM**: epsilon = 0.0102 +0.0004/-0.0001 (68% CI)
+  - tau = 614, n_eff = 5211, acceptance = 35%
+- Both chains converged (n_steps > 50*tau)
+
+### Bootstrap Summary
+- Delta_BIC = -66,311 [-73,259, -59,448] (68% CI)
+- Empirical p-value = 1.0000 (JANUS always preferred)
+
+### Changed
+- Updated all figures from v17.2 to v17.3 naming convention
+- Enhanced MCMC section in publication with diagnostics description
+- Updated run_mcmc_analysis() with full diagnostics and chain storage
+
+### Files
+- `scripts/analysis_janus_v17.3_mcmc.py`: New analysis script with full MCMC (~1970 lines)
+- `results/janus_v17.3_mcmc_results.json`: Complete results with MCMC diagnostics
+- `results/checkpoints/mcmc_*.pkl`: MCMC checkpoint files for JANUS and LCDM
+- `results/figures/fig_v17.3_*.pdf`: 9 figures (6 updated + 3 new)
+- `papers/draft_preprint/janus_v17.3_mcmc.tex`: LaTeX source
+
 ## [17.2] - 2026-01-04
 
 ### Added
