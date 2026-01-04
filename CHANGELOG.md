@@ -5,6 +5,26 @@ All notable changes to the JANUS-Z project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.3a] - 2026-01-05
+
+### Fixed
+- **Numerical consistency**: All chi² and BIC values now match JSON results file
+  - JANUS chi² = 81,934 (was 149,547)
+  - LCDM chi² = 21,641 (was 29,109)
+  - ΔBIC = -60,293 (was -120,438)
+- **Bootstrap values**: Correctly cited ΔBIC = -66,311 with 68% CI
+- **Missing reference**: Added corner2016 to bibliography
+- **Table reference**: Removed undefined Table 1 reference
+- **Date updated**: January 5, 2026
+
+### Changed
+- Added explanatory note about high chi² values due to template model calibration
+- Clarified that relative comparison (ΔBIC) remains valid
+- Added Section label for bootstrap cross-reference
+
+### Files
+- `papers/draft_preprint/janus_v17.3a_mcmc.pdf`: Corrected publication (12 pages)
+
 ## [17.4] - 2026-01-05
 
 ### Added
