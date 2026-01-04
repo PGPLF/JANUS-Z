@@ -5,6 +5,26 @@ All notable changes to the JANUS-Z project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.2] - 2026-01-04
+
+### Added
+- **Bootstrap validation**: 1000 iterations resampling for empirical p-values
+- **Epsilon sensitivity analysis**: chi2 vs epsilon over [0.05, 0.20] range
+- New figure: `fig_v17.2_bootstrap_distributions.pdf` (Delta_chi2 and Delta_BIC distributions)
+- New figure: `fig_v17.2_epsilon_sensitivity.pdf` (chi2 vs epsilon curves)
+- Robust confidence intervals on model comparison statistics
+
+### Changed
+- Updated all figures from v17.1 to v17.2 naming convention
+- Enhanced statistical validation section in publication
+- Script now includes verbose parameter for bootstrap efficiency
+
+### Files
+- `scripts/analysis_janus_v17.2_bootstrap.py`: New analysis script with bootstrap + sensitivity
+- `results/janus_v17.2_bootstrap_results.json`: Complete results including bootstrap statistics
+- `results/figures/fig_v17.2_*.pdf`: 6 figures (4 updated + 2 new)
+- `papers/draft_preprint/janus_v17.2_bootstrap.pdf`: Publication (12 pages)
+
 ## [17.1a] - 2026-01-04
 
 ### Fixed
