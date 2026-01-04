@@ -49,4 +49,28 @@ env/
 # Temporary files
 *.tmp
 *.bak
+
+# LaTeX auxiliary files
+*.aux
 *.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+
+# Keep PDFs (compiled papers)
+# !*.pdf
+
+# Screenshots and temporary images
+screenshot*.png
+
+# Archive (work in progress)
+archive/
