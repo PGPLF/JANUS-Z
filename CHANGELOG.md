@@ -41,6 +41,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added velocity dispersion measurements (sigma_v ~ 180 km/s)
 - Professional twocolumn format with booktabs tables
 
+## [15.2] - 2026-01-04
+
+### Fixed
+- **Bibliographie**: Correction des références arXiv placeholder
+  - JADES DR4: `arXiv:2510.01033` (Curtis-Lake et al. 2025)
+  - Shen 2025: `arXiv:2509.19427` (Early Dark Energy simulations)
+  - Castellano → Morishita 2023: `arXiv:2211.09097` (GLASS protocluster z=7.88)
+
+### Changed
+- Renamed files: `janus_v15.1_robust_statistics.*` → `janus_v15.2_robust_statistics.*`
+
 ## [15.1] - 2026-01-04
 
 ### Fixed
