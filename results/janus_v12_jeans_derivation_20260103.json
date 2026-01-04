@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "date": "2026-01-03T20:02:14.074389",
+    "version": "12.0 - JEANS DERIVATION (THEORETICAL CORRECTION)",
+    "n_galaxies": 108,
+    "n_bins": 25,
+    "theoretical_correction": "f_accel = \u221a\u03be\u2080 (not \u221a(1+\u03c7\u03be\u2080))"
+  },
+  "janus_parameters": {
+    "xi_0": 64.01,
+    "f_accel_v11_OLD": 8.062877898120497,
+    "f_accel_v12_NEW": 8.000624975587845,
+    "delta_f_percent": -0.7720930828825218,
+    "derivation": "Jeans timescale: t_J \u221d 1/\u221a(G\u03c1), with |\u03c1\u0304|=\u03be\u2080\u03c1 \u2192 f=\u221a\u03be\u2080"
+  },
+  "results_by_scenario": {
+    "illustris": {
+      "LCDM": {
+        "epsilon": 0.023251241380628025,
+        "chi2": 96.39092392007558,
+        "chi2_per_dof": 4.819546196003779
+      },
+      "JANUS": {
+        "epsilon": 0.14993890391962933,
+        "chi2": 63.81044581037555,
+        "chi2_per_dof": 3.1905222905187776
+      },
+      "comparison": {
+        "delta_chi2": 32.58047810970003,
+        "significance_sigma": 5.707931158458381
+      }
+    },
+    "bayesian": {
+      "LCDM": {
+        "epsilon": 0.0900911168496128,
+        "chi2": 98.85645953325339,
+        "chi2_per_dof": 4.9428229766626695
+      },
+      "JANUS": {
+        "epsilon": 0.10080287370649557,
+        "chi2": 65.08088390545818,
+        "chi2_per_dof": 3.254044195272909
+      },
+      "comparison": {
+        "delta_chi2": 33.775575627795206,
+        "significance_sigma": 5.811675802020894
+      }
+    }
+  }
+}

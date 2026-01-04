@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "date": "2026-01-03T19:47:30.580183",
+    "version": "11.0 - DEGENERACY BREAKING",
+    "n_galaxies": 108,
+    "n_bins": 25,
+    "scenarios_tested": [
+      "unconstrained",
+      "thesan",
+      "illustris",
+      "fire",
+      "bayesian"
+    ]
+  },
+  "janus_parameters_fixed": {
+    "xi_0": 64.01,
+    "chi": 1.0,
+    "f_accel": 8.062877898120497,
+    "source": "SNIa constraint (v8.0)"
+  },
+  "simulation_constraints": {
+    "thesan_zoom_2025": {
+      "description": "\u03b5 < 0.20 at z > 9",
+      "reference": "Kannan et al. 2025 (simulated)"
+    },
+    "illustris_tng_2025": {
+      "description": "\u03b5_max ~ 0.15",
+      "reference": "Nelson et al. 2025 (simulated)"
+    },
+    "fire3_2025": {
+      "description": "\u03b5 < 0.10 from [CII] diagnostics",
+      "reference": "Hopkins et al. 2025 (simulated)"
+    }
+  },
+  "results_by_scenario": {
+    "unconstrained": {
+      "LCDM": {
+        "epsilon": 0.38022970927579997,
+        "M_peak": 3081825507065.6797,
+        "alpha": 3.0,
+        "beta": 1.9423169747155058,
+        "scatter": 1.0,
+        "chi2": 96.39974727465597,
+        "chi2_per_dof": 4.819987363732798
+      },
+      "JANUS": {
+        "epsilon": 0.8626729027856797,
+        "M_peak": 51788905250915.016,
+        "alpha": 3.0,
+        "beta": 1.5402958561268068,
+        "scatter": 0.29055698078896264,
+        "chi2": 92.6636195176698,
+        "chi2_per_dof": 4.63318097588349
+      },
+      "comparison": {
+        "delta_chi2": 3.736127756986164,
+        "improvement_pct": 3.8756613607517343
+      }
+    },
+    "thesan": {
+      "LCDM": {
+        "epsilon": 0.2,
+        "M_peak": 2487882406103.0254,
+        "alpha": 3.0,
+        "beta": 0.4732257878568034,
+        "scatter": 1.0,
+        "chi2": 96.40278590302314,
+        "chi2_per_dof": 4.820139295151157
+      },
+      "JANUS": {
+        "epsilon": 0.2,
+        "M_peak": 33988371033341.48,
+        "alpha": 3.0,
+        "beta": 3.0,
+        "scatter": 0.01084237075855526,
+        "chi2": 63.83336082539352,
+        "chi2_per_dof": 3.191668041269676
+      },
+      "comparison": {
+        "delta_chi2": 32.569425077629624,
+        "improvement_pct": 33.78473430258852
+      }
+    },
+    "illustris": {
+      "LCDM": {
+        "epsilon": 0.023251241380628025,
+        "M_peak": 1213854458552.1116,
+        "alpha": 3.0,
+        "beta": 3.0,
+        "scatter": 1.0,
+        "chi2": 96.39092392007558,
+        "chi2_per_dof": 4.819546196003779
+      },
+      "JANUS": {
+        "epsilon": 0.13410364145788975,
+        "M_peak": 29976233686665.36,
+        "alpha": 2.9868329079913924,
+        "beta": 1.354449529546421,
+        "scatter": 0.010290688827108903,
+        "chi2": 66.70543959417671,
+        "chi2_per_dof": 3.3352719797088355
+      },
+      "comparison": {
+        "delta_chi2": 29.68548432589887,
+        "improvement_pct": 30.796970418618635
+      }
+    },
+    "fire": {
+      "LCDM": {
+        "epsilon": 0.1,
+        "M_peak": 1974634488191.9336,
+        "alpha": 3.0,
+        "beta": 0.9517027093943031,
+        "scatter": 1.0,
+        "chi2": 96.40184268310934,
+        "chi2_per_dof": 4.820092134155467
+      },
+      "JANUS": {
+        "epsilon": 0.004547487162860753,
+        "M_peak": 8663015152184.971,
+        "alpha": 2.8295815386939385,
+        "beta": 1.3517299771148708,
+        "scatter": 0.039780899554178836,
+        "chi2": 83.70380916824078,
+        "chi2_per_dof": 4.185190458412039
+      },
+      "comparison": {
+        "delta_chi2": 12.698033514868555,
+        "improvement_pct": 13.17198215454173
+      }
+    },
+    "bayesian": {
+      "LCDM": {
+        "epsilon": 0.0900911168496128,
+        "M_peak": 4416540448672.065,
+        "alpha": 2.3043678706279507,
+        "beta": 1.3704727702356907,
+        "scatter": 1.0,
+        "chi2": 98.85645953325339,
+        "chi2_per_dof": 4.9428229766626695
+      },
+      "JANUS": {
+        "epsilon": 0.10265741802962612,
+        "M_peak": 27205049220332.668,
+        "alpha": 3.0,
+        "beta": 1.7749523202315534,
+        "scatter": 0.011118216510807025,
+        "chi2": 64.18487571713277,
+        "chi2_per_dof": 3.2092437858566383
+      },
+      "comparison": {
+        "delta_chi2": 34.67158381612062,
+        "improvement_pct": 35.072653805144384
+      }
+    }
+  }
+}

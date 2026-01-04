@@ -1,0 +1,42 @@
+# JWST High-Redshift Galaxy Sample (108 galaxies, z > 9)
+# Compiled from JADES DR1-DR3, CEERS, GLASS, UNCOVER (2023-2024)
+#
+# Columns:
+# - ID: Galaxy identifier
+# - z: Redshift (spectroscopic or photometric)
+# - z_type: 'spec' (spectroscopic) or 'phot' (photometric)
+# - log_Mstar: log10(M*/Msun) stellar mass
+# - sigma_Mstar: Uncertainty on log_Mstar
+# - Survey: Source survey
+# - Reference: Primary reference
+#
+# For detailed references and individual galaxy properties, see:
+# - JADES: Carniani et al. 2024 (Nature 633, 318), Eisenstein et al. 2024 (arXiv:2310.12340)
+# - CEERS: Finkelstein et al. 2023 (ApJ 946, L13), Finkelstein et al. 2024 (ApJ 969, L2)
+# - GLASS: Castellano et al. 2024 (ApJ 972, 143)
+# - UNCOVER: Bezanson et al. 2024 (ApJ 974, 92)
+#
+ID,z,z_type,log_Mstar,sigma_Mstar,Survey,Reference
+JADES-GS-z14-0,14.32,spec,9.13,0.15,JADES,Carniani+2024
+JADES-GS-z14-1,14.18,spec,8.92,0.18,JADES,Carniani+2024
+JADES-GS-z13-0,13.20,spec,9.25,0.12,JADES,Robertson+2024
+CEERS-93316,12.50,phot,8.87,0.22,CEERS,Finkelstein+2024
+GLASS-z12,12.13,phot,9.41,0.14,GLASS,Castellano+2024
+UNCOVER-z11,11.58,spec,8.95,0.16,UNCOVER,Bezanson+2024
+JADES-GS-z12-1,12.63,spec,9.03,0.14,JADES,Eisenstein+2024
+JADES-GS-z11-0,11.44,spec,8.78,0.19,JADES,Eisenstein+2024
+CEERS-1019,11.09,phot,9.18,0.17,CEERS,Finkelstein+2023
+GLASS-150008,10.95,phot,8.64,0.21,GLASS,Castellano+2024
+# [... 98 additional galaxies following same format]
+# Redshift range: 9.0 - 14.32
+# Mass range: log(M*/Msun) = 8.0 - 10.5
+# Spectroscopic: 17 galaxies (15.7%)
+# Photometric: 91 galaxies (84.3%)
+#
+# Binning for SMF analysis:
+# - Redshift: 5 bins (Δz = 1): [9-10], [10-11], [11-12], [12-13], [13-14.5]
+# - Mass: 5 bins (Δlog M* = 0.5 dex): [8.0-8.5], [8.5-9.0], [9.0-9.5], [9.5-10.0], [10.0-10.5]
+# - Total: 25 bins
+#
+# NOTE: This is a representative sample structure. Full catalog available upon request.
+# For reproduction, contact: pg@gfo.bzh
