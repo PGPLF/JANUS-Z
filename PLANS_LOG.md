@@ -129,13 +129,81 @@ Grille:
 ## [v17.3] - PLANIFIE
 
 ### Objectif
-MCMC complet avec emcee pour posterieurs robustes sur epsilon.
+MCMC complet avec emcee pour posterieurs robustes sur epsilon, diagnostics de convergence, corner plots publication-ready.
 
-### Etapes prevues
-1. Augmenter n_steps: 1000 -> 100000
-2. Diagnostics convergence (autocorrelation, Gelman-Rubin)
-3. Corner plots avec credible intervals
-4. Comparaison posterieurs JANUS vs LCDM
+### Etapes detaillees
+
+| # | Tache | Description | Fichiers |
+|---|-------|-------------|----------|
+| 1 | Creer script v17.3 | Copier v17.2, augmenter MCMC | `scripts/analysis_janus_v17.3_mcmc.py` |
+| 2 | Augmenter n_steps | 1000 -> 100,000 steps | Fonction `run_mcmc_analysis()` |
+| 3 | Ajouter diagnostics | Autocorrelation, Gelman-Rubin, acceptance | Nouvelles fonctions |
+| 4 | Burn-in + Thinning | Retirer 20% burn-in, thin par tau | Post-processing |
+| 5 | Corner plots | Posterieurs 1D/2D avec CI | `plot_mcmc_corner_full()` |
+| 6 | Trace plots | Visualisation mixing walkers | `plot_mcmc_traces()` |
+| 7 | Generer figures | 8-9 figures v17.3 | `results/figures/fig_v17.3_*.pdf` |
+| 8 | Mettre a jour LaTeX | Section MCMC etendue | `janus_v17.3_mcmc.tex` |
+| 9 | Compiler PDF | 2 passes pdflatex | `janus_v17.3_mcmc.pdf` |
+| 10 | Mettre a jour docs | CHANGELOG, PLANS_LOG, CONVERSATION_LOG | - |
+| 11 | Commit & Push | GitHub | - |
+
+### Configuration MCMC
+
+```
+n_walkers = 32          # Nombre de walkers (inchange)
+n_steps = 100000        # Steps par walker (x100 vs v17.2)
+burn_in_frac = 0.2      # Retirer 20% initial
+thin_factor = auto      # Base sur autocorrelation time
+```
+
+### Diagnostics de convergence
+
+1. **Autocorrelation time (tau)**
+   - Calculer tau pour chaque parametre
+   - Verifier n_effective = n_samples / tau > 1000
+   - Critere: n_steps > 50 x tau
+
+2. **Gelman-Rubin (R-hat)**
+   - Comparer variance intra-chain vs inter-chain
+   - Critere: R-hat < 1.1 pour tous parametres
+
+3. **Acceptance rate**
+   - Taux d'acceptation des proposals
+   - Critere: 0.2 < rate < 0.5
+
+4. **Visual diagnostics**
+   - Trace plots: verifier mixing
+   - Autocorrelation plots: verifier decroissance
+
+### Nouvelles figures
+
+| Figure | Contenu |
+|--------|---------|
+| `fig_v17.3_mcmc_corner.pdf` | Corner plot 2D JANUS + LCDM |
+| `fig_v17.3_mcmc_trace.pdf` | Trace plots walkers |
+| `fig_v17.3_mcmc_autocorr.pdf` | Autocorrelation function |
+| `fig_v17.3_convergence_diagnostics.pdf` | R-hat, n_eff summary |
+
+### Livrables attendus
+
+- `scripts/analysis_janus_v17.3_mcmc.py`
+- `results/janus_v17.3_mcmc_results.json` (avec diagnostics)
+- `results/figures/fig_v17.3_*.pdf` (8-9 figures)
+- `papers/draft_preprint/janus_v17.3_mcmc.pdf`
+
+### Estimation temps execution
+
+- MCMC JANUS (100k steps): ~15-20 min
+- MCMC LCDM (100k steps): ~15-20 min
+- Total script: ~45-60 min
+
+### Risques et mitigations
+
+| Risque | Mitigation |
+|--------|------------|
+| Non-convergence | Augmenter n_steps ou ajuster prior |
+| Temps trop long | Option n_steps reduit (50k) |
+| Memoire | Thinning agressif si necessaire |
 
 ---
 
