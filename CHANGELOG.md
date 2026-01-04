@@ -5,6 +5,28 @@ All notable changes to the JANUS-Z project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.4a] - 2026-01-05
+
+### Fixed
+- **Missing references**: Added De Looze et al. 2014, Yan et al. 2020, Loiacono et al. 2021, Kass & Raftery 1995
+- **Figure 3 caption**: Corrected "55 galaxies" to "135 galaxies" (consistent with text)
+- **Epsilon clarification**: Added explanatory note distinguishing three ε values:
+  - ε = 0.10 (SMF optimal)
+  - ε = 0.0106 (MCMC posterior median)
+  - ε = 0.05 (sensitivity analysis minimum)
+- **Numerical consistency**: Updated χ² and BIC values to match v17.3 JSON results
+  - JANUS: χ² = 81,934, BIC = 81,937
+  - LCDM: χ² = 21,641, BIC = 21,644
+  - ΔBIC = -60,293
+
+### Changed
+- **[CII] test presentation**: Clearly marked as "Preliminary" with caveats about small sample size
+- Added section labels for internal cross-references
+- Enhanced "Limitations" section discussing [CII] test caveats
+
+### Files
+- `papers/draft_preprint/janus_v17.4a_cii_lf.pdf`: Corrected publication (13 pages)
+
 ## [17.3a] - 2026-01-05
 
 ### Fixed
