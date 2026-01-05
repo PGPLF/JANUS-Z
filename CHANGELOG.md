@@ -5,6 +5,32 @@ All notable changes to the JANUS-Z project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.3b] - 2026-01-05
+
+### Fixed
+- **ΔBIC convention clarified**: Explicit statement that ΔBIC = BIC_LCDM - BIC_JANUS
+  - Negative ΔBIC (-60,293) means BIC_LCDM < BIC_JANUS → LCDM favored by raw BIC
+  - Added interpretation caveats about template calibration limitations
+- **Figure 3 caption**: Corrected "55 galaxies" to "135 galaxies"
+- **Table 1 corrected**: Now compares both models at same ε=0.15:
+  - JANUS χ² = 113,461
+  - LCDM χ² = 40,473
+- **Kass & Raftery reference**: Added complete bibitem for BIC interpretation scale
+
+### Added
+- Explicit note on low MCMC optimal ε (~0.01) reflecting template calibration, not physical SF efficiency
+- Clarification that template limitations affect absolute χ² but relative comparison remains valid
+- Honest acknowledgment that LCDM achieves lower BIC in current template framework
+- Discussion of qualitative JANUS advantages (proto-clusters, metallicity, BH growth) as alternative tests
+
+### Changed
+- More balanced presentation of model comparison results
+- Unified notation: ε → ε throughout (was mixed ε/ε)
+- Updated conclusions to accurately reflect that LCDM has lower BIC but JANUS offers unified framework
+
+### Files
+- `papers/draft_preprint/janus_v17.3b_mcmc.pdf`: Corrected publication (13 pages)
+
 ## [17.4a] - 2026-01-05
 
 ### Fixed
