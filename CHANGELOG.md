@@ -5,6 +5,22 @@ All notable changes to the JANUS-Z project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [18.1] - 2026-01-05
+
+### Fixed
+- **Missing figures**: Added 4 figures that existed but were not included in LaTeX:
+  - `fig_v18_mcmc_posteriors.pdf`: MCMC posterior distributions
+  - `fig_v18_convergence_diagnostics.pdf`: Convergence metrics summary
+  - `fig_v18_cii_luminosity_function.pdf`: [CII] LF comparison
+  - `fig_v18_dusty_mass_sfr.pdf`: Dusty galaxy M*-SFR diagram
+
+### Changed
+- Now includes all 9 figures (was 5 in v18.0)
+- Better integration of [CII] LF section with figure reference
+
+### Files
+- `papers/draft_preprint/janus_v18.1_final.pdf`: Corrected publication (13 pages, 9 figures)
+
 ## [18.0] - 2026-01-05
 
 ### Added
