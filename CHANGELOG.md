@@ -5,6 +5,38 @@ All notable changes to the JANUS-Z project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [18.0] - 2026-01-05
+
+### Added
+- **Final Integrated Publication**: Consolidation of all v17.x improvements into unified publication
+- **[CII] Luminosity Function section**: Preliminary test with 24 dusty galaxies (ΔBIC = 1.1, inconclusive)
+- **Comprehensive JSON**: `janus_v18_comprehensive_results.json` merging v17.3 and v17.4 data
+- **9 renamed figures**: All figures updated to v18 naming convention
+
+### Content Integration
+- Full MCMC analysis (100k steps) from v17.3
+- Bootstrap validation (1000 iterations) from v17.3
+- Epsilon sensitivity analysis from v17.3
+- Proto-cluster dynamics (6 clusters, 26 members)
+- Metallicity evolution (135 galaxies)
+- AGN/BH growth analysis (GHZ9, GN-z11)
+- Dusty galaxies test (24 NIRCam-dark)
+- [CII] LF test (preliminary, from v17.4)
+
+### Key Results (unchanged from v17.3b)
+- JANUS: χ² = 81,934, BIC = 81,937 (ε = 0.10)
+- LCDM: χ² = 21,641, BIC = 21,644 (ε = 0.10)
+- ΔBIC = -60,293 (LCDM lower BIC in template framework)
+- At fixed ε=0.15: JANUS χ² = 113,461, LCDM χ² = 40,473
+- Bootstrap: ΔBIC = -66,311 [-73,259, -59,448] 68% CI
+- [CII] LF: ΔBIC = 1.1 (inconclusive, N=24)
+
+### Files
+- `papers/draft_preprint/janus_v18_final.tex`: LaTeX source
+- `papers/draft_preprint/janus_v18_final.pdf`: Final publication (13 pages)
+- `results/janus_v18_comprehensive_results.json`: Consolidated results
+- `results/figures/fig_v18_*.pdf`: 9 figures
+
 ## [17.3b] - 2026-01-05
 
 ### Fixed
